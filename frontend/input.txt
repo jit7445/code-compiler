@@ -1,0 +1,5 @@
+what is malware.
+ malware is softwere program that contain malicious code. it harm to your computer.
+ what is virus.
+ virus is a type of malware that replicate itself by attaching to other programs or files on a computer.
+ 
