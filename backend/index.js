@@ -1,17 +1,20 @@
 const express = require("express");
 const { exec } = require("child_process");
+const cors = require('cors')
 const app = express();
 app.use(express.json());
+app.use(cors())
 
 const images = {
   python: "python:3.13.0rc2-alpine3.20",
   node: "node:22-alpine3.19",
   ruby: "ruby:3.2-alpine",
-  cpp: "gcc:12", // Using a valid GCC image
+  cpp: "gcc:12", 
 };
 
 app.post("/execute", (req, res) => {
   const { language, code } = req.body;
+  // console.log("Request received:", req.body);
   const image = images[language];
 
   if (!image) {
